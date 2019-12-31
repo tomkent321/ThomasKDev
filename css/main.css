@@ -1311,12 +1311,12 @@ body {
 }
 
 .header__logo {
-  height: 130px;
+  height: 110px;
 }
 
 .header__logo:hover {
-  -webkit-animation: moveInLeft 1s ease-out;
-          animation: moveInLeft 1s ease-out;
+  -webkit-animation: moveInLeft 2s ease-out;
+          animation: moveInLeft 2s ease-out;
 }
 
 .header__text-box {
