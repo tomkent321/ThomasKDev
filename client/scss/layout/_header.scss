@@ -1,0 +1,66 @@
+.header {
+  height: 85vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-header-light, 0.7),
+      rgba($color-header-dark, 0.7)
+    ),
+    url(/img/heroNew2.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-header-dark, 0.8),
+        rgba($color-header-light, 0.5)
+      ),
+      url(/img/heroNew2.jpg);
+  }
+
+  /*  note: media query above: 
+
+  1. min-resolution 192dpi is 2 DPR (apple retina), comma after min-width is same as "or"
+
+  1a. the -webkit-min-device... is for safari on cell phones.
+
+  2. convert px to "em" by dividing pixels by 16 (default font size)  so above 600 break is 600/19 or 37.5em
+
+  */
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &__logo {
+    height: 130px;
+  }
+
+  &__logo:hover {
+    animation: moveInLeft 1s ease-out;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

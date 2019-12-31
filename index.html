@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!-- These are the css links to use before the final minify. -->
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- This is the final minified form.. script:  npm run concat:css then minify.  Resulting file will be the file below -->
+
+    <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <script src="app.js"></script>
+
+    <title>Thomas K Developers</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span></label
+      >
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link"><span>01</span> About Natours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-features" class="navigation__link"><span>02</span> Your benefits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-tours" class="navigation__link"><span>03</span> Popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-stories" class="navigation__link"><span>04</span> Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-book" class="navigation__link"><span>05</span> Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="img/TKDLogo.png" alt="logo" class="header__logo" />
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">CODE ARTISTRY</span>
+          <span class="heading-primary--sub">INFORMATION TO INSPIRATION</span>
+        </h1>
+        <!-- <a href="#section-tours" class="btn btn--theme btn--animated" id="push-btn"
+          >PUSH TO START</a
+        > -->
+        <a href="#section-tours" class="btn btn--theme" id="push-btn">PUSH TO START</a>
+      </div>
+      <div class="bg-video" id="videoshow">
+        <!-- <video id="header-video"class="bg-video__content" autoplay muted loop>  -->
+        <video id="header-video" class="bg-video__content" muted loop>
+          <source src="img/27167386-preview.mp4" type="video/mp4" />
+
+          <!-- <source src="img/video.webm" type="video/webm" /> -->
+          Your browser is not supported!
+        </video>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-about" id="section-about">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Developer Thomas K's Bio
+          </h2>
+          
+        </div>
+        
+        <div class="row">
+          <div class="col-1-of-1">
+            <!-- <div > -->
+            <p class="paragraph">
+              Hello! I am Tom K. Hurd, Thomas K Developers lead (and for now, only) developer. Hey,
+              even Bill Gates had to start somewhere!
+            </p>
+            
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Background
+            </h3>
+            <div class="bio-picture">
+              <!-- <img class="bio-img" src="img/TomKphoto.jpg" alt="TomK" height= 175; /> -->
+              <img class="bio-img" src="img/TomKphoto.jpg" alt="TomK"  />
+            </div>
+
+            <p class="paragraph">
+              After successful careers in airline, large retail management and the financial world,
+              I decidede reinvented myself into a competent, excited and happy full-stack web
+              developer. A career that is a perfect fit for the work ethic, technical skills and
+              people skills I learned in those industries.
+            </p>
+            <p class="paragraph">
+              Built on the foundation of an intensive code development program at the University of
+              Denver along with a systematic process to hone those skills through a year of
+              intensive study and practice, I offer development skills that are a step ahead of just
+              the basics. However, I am still fairly new and probably naïve, but know enough to know
+              how to learn and can ramp up my contributions quickly with the right environment and
+              direction.
+            </p>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Skills
+            </h3>
+            <p class="paragraph">
+              Continuous learning and learning quickly is absolutely essential in the coding world.
+              Above all I have learned how to find, learn quickly and implement what is needed to
+              make code work.
+            </p>
+            <p class="paragraph">
+              Beyond that, I have specialized in mastering the skills and languages needed to be
+              that elusive true full stack web developer. This includes a special focus on SQL and
+              Mongo databases, Node.js, Express and React. I’ve developed React programs with
+              internal state, Redux and contextual APIs and know which work best in various
+              situations. I’ve also dug deeply into all the versions of Javascript and know when to
+              hoist and when not to hoist and took the time to learn how Javascript works behind the
+              scenes.
+            </p>
+            <p class="paragraph">
+              Finally, we know it is the user who determines if our efforts worked. I’ve studied and
+              practiced advanced css and scss coding and file organization to be sure that great
+              coding is presented in a great UI. Many years of business experience with the Adobe
+              Creative Suite has greatly enhanced the capability for developing compelling UI’s.
+            </p>
+            <p class="paragraph">
+              See a list of skills and programs here. (link)
+            </p>
+
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Intangibles
+            </h3>
+            <p class="paragraph">
+              Basic coding skill is the ticket for admission. But my value-added contribution is a
+              great work-ethic, integrity, maturity, truly enjoying and knowing how to work with
+              people, and a commitment to continuous learning, flexibility and a positive,
+              optimistic attitude toward life in general and toward coding projects in particular.
+              Oh, yes and I’m very modest, too!
+            </p>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Availability
+            </h3>
+            <p class="paragraph">
+              I am available based on my committed project schedule. My ideal situation is to
+              contribute 20 – 40 hours per week working remotely most of the time. However, I am
+              willing to work on-site as needed in the Denver metropolitan area. I prefer working on
+              a contract basis but would consider contract to permanent if that makes sense.
+            </p>
+
+            <a href="#" class="btn-text">Print Resume &rarr;</a>
+          </div>
+          <!-- <div class="col-1-of-2">
+            <div class="composition">
+              <img
+                class="composition__photo composition__photo--p1"
+                alt="Photo 1"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px "
+                src="img/nat-1-large.jpg"
+              />
+              <img
+                class="composition__photo composition__photo--p2"
+                alt="Photo 2"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px "
+                src="img/nat-2-large.jpg"
+              />
+              <img
+                class="composition__photo composition__photo--p3"
+                alt="Photo 3"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px "
+                src="img/nat-3-large.jpg"
+              />
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section-features" id="section-features">
+        <div class="row">
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Explore the world
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, maiores?
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Meet Nature
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, architecto ex?
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-map"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Find Your Way
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, tempora eligendi.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-heart"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Live a Healthier Life
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, provident non?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tours">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary" id="section-tours">
+            SAMPLE PROJECTS
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--1">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">
+                    DEVELOPER CONNECTOR
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>REACT</li>
+                    <li>REDUX</li>
+                    <li>NODEJS</li>
+                    <li>EXPRESS</li>
+                    <li>MONGODB</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__side card__side--back card__side--back-1">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__project-title">Developer Connect - REACT App</p>
+                      <p class="card__project-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor totam vero
+                        iste voluptatum veniam aspernatur, illo eligendi earum voluptatibus ipsa
+                        placeat eius necessitatibus nobis, ullam libero officiis, sunt illum odit
+                        numquam. Iusto placeat unde harum voluptatum, hic earum perferendis magnam
+                        totam sit veniam, enim saepe. Natus earum quasi cupiditate ut!
+                      </p>
+                    </div>
+                    <a
+                      href="https://enigmatic-island-62988.herokuapp.com/"
+                      target="_blank"
+                      class="btn btn--white"
+                      >See the app!</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--2">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--2">
+                    The forest hiker
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>7 day tour</li>
+                    <li>Up to 40 people</li>
+                    <li>6 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: medium</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__side card__side--back card__side--back-2">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">$897</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Book now!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--3">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--3">
+                    The snow adventurer
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>5 day tour</li>
+                    <li>Up to 15 people</li>
+                    <li>3 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: hard</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__side card__side--back card__side--back-3">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">$997</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Book now!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-center-text u-margin-top-huge">
+          <a href="#" class="btn btn--green">Discover all tours</a>
+        </div>
+      </section>
+
+      <section class="section-stories" id="section-stories">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <!-- see coverr.co for more cover videos: is bookmarked under Developer Tools -->
+            <source src="img/23855947-preview.mp4" type="video/mp4" />
+            <!-- <source src="img/video.webm" type="video/webm" /> -->
+            Your browser is not supported!
+          </video>
+        </div>
+
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            We make people genuinely happy
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img" />
+              <figcaption class="story__caption">
+                Mary Smith
+              </figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                I had the best week ever with my family
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed perferendis
+                temporibus error quis dicta possimus autem? Distinctio, excepturi error?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img" />
+              <figcaption class="story__caption">
+                Jack Wilson
+              </figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                WOW! My life is completely different now!
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sed perferendis
+                temporibus error quis dicta possimus autem? Distinctio, excepturi error?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-center-text u-margin-top-huge">
+          <a href="#" class="btn-text">More stories &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-book" id="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">
+                    Start booking now
+                  </h2>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email" id="email" required />
+                  <label for="email" class="form__label">Email</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="small" name="group-size" />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span> Small tour group</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="large" name="group-size" />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>Large tour group</label
+                    >
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <button class="btn btn--green">Next steps &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <picture class="footer__logo">
+          <source
+            srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+            media="(max-width: 37.5em)"
+          />
+          <img
+            src="img/logo-green-2x.png"
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+          />
+        </picture>
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Built by <a href="#" class="footer__link">Thomas Hurd</a> as a project focused on
+            <a href="#" class="footer__link">Advanced CSS and Sass. </a>
+            Copyright &copy; by Jonas Schmedmen. You are 100% allowed to use this webpage for both
+            personal and commercial use, but NOT to claim it as your own design.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="tour picture" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="tour picture" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Start booking now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quaerat natus veritatis
+            atque distinctio modi doloribus iste sit facilis itaque! Iure sequi nemo facere amet
+            possimus provident consequuntur esse odit, repudiandae aut rerum deserunt illo laborum
+            sunt minima. Nostrum saepe obcaecati sunt cum nam ipsum perferendis laudantium aliquam
+            nemo doloribus.
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    (function() {
+      // cache DOM element
+      const nav = document.querySelector('.navigation');
+      const navCheck = nav.querySelector('#navi-toggle');
+      const navLinks = nav.querySelectorAll('.navigation__link');
+
+      // on link click, toggle checkbox 'checked' state
+      navLinks.forEach(link => link.addEventListener('click', _ => (navCheck.checked = false)));
+    })();
+  </script>
+</html>
