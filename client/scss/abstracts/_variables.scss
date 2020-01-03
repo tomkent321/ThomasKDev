@@ -1,8 +1,8 @@
 // colors
 
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+$color-primary: #52a099;
+$color-primary-light:#81bab4;
+$color-primary-dark: #4e7d78;
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
@@ -41,3 +41,12 @@ $gutter-horizontal: 6rem;
 // Misc
 
 $border-radius: 5px;
+
+
+// media query break point variables  must be in scss not css variables to work
+
+$bp-1200: 75em;
+$bp-1100: 68.75em;
+$bp-900: 56.25em;
+$bp-600: 37.5em;
+$bp-500: 31.25em;

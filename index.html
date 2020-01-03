@@ -19,8 +19,12 @@
     <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
-    <script src="app.js"></script>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
 
     <title>Thomas K Developers</title>
   </head>
@@ -36,10 +40,10 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#section-about" class="navigation__link"><span>01</span> Developer Bio</a>
+            <a href="#section-bio" class="navigation__link"><span>01</span> Developer Bio</a>
           </li>
           <li class="navigation__item">
-            <a href="#section-features" class="navigation__link"><span>02</span> Your benefits</a>
+            <a href="#section-skills" class="navigation__link"><span>02</span> Skills</a>
           </li>
           <li class="navigation__item">
             <a href="#section-projects" class="navigation__link"><span>03</span> Sample Projects</a>
@@ -66,7 +70,7 @@
         <!-- <a href="#section-tours" class="btn btn--theme btn--animated" id="push-btn"
           >PUSH TO START</a
         > -->
-        <a href="#section-about" class="btn btn--theme" id="push-btn">PUSH TO START</a>
+        <a href="#section-bio" class="btn btn--theme" id="push-btn">PUSH TO START</a>
       </div>
       <div class="bg-video" id="videoshow">
         <!-- <video id="header-video"class="bg-video__content" autoplay muted loop>  -->
@@ -80,169 +84,167 @@
     </header>
 
     <main>
-      <section class="section-about" id="section-about">
+      <section class="section-bio" id="section-bio">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Thomas K's Bio
           </h2>
         </div>
 
-        <div class="row">
-          <div class="col-1-of-1">
-            <!-- <div > -->
-            <p class="paragraph">
+        <div class="bio__main">
+          <!-- <p class="bio__content-text" style="margin-left: 3rem"> -->
+          <div class="bio__container">
+            <p class="bio__content-text">
               Hello! I am Tom K. Hurd, Thomas K Developers lead (and for now, only) developer. Hey,
-              even Bill Gates had to start somewhere!
-            </p>
-
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Background
-            </h3>
-            <div class="bio-picture">
-              <!-- <img class="bio-img" src="img/TomKphoto.jpg" alt="TomK" height= 175; /> -->
-              <img class="bio-img" src="img/TomKphoto.jpg" alt="TomK" />
-            </div>
-
-            <p class="paragraph">
-              After successful careers in airline, large retail management and the financial world,
-              I decided to reinvent myself into a competent, excited and happy full-stack web
-              developer: a career that is a perfect fit for the work ethic, technical skills and
-              people skills I learned in those industries.
-            </p>
-            <p class="paragraph">
-              Built on the foundation of an intensive code development program at the University of
-              Denver along with a systematic process to hone those skills through a year of
-              intensive follow-up study and practice, I offer development skills that are a step
-              ahead of just the basics.
-            </p>
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Skills
-            </h3>
-            <p class="paragraph">
-              Continuous learning and learning quickly is absolutely essential in the coding world.
-              Above all I have learned how to find, learn quickly and implement what is needed to
-              make code work.
-            </p>
-            <p class="paragraph">
-              Beyond that, I have specialized in mastering the skills and languages needed to be
-              that elusive true full stack web developer. This includes a special focus on SQL and
-              Mongo databases, Node.js, Express and React. I’ve developed React programs with
-              internal state, Redux and contextual APIs and know which work best in various
-              situations. I’ve also dug deeply into all the versions of Javascript and know when to
-              hoist and when not to hoist and took the time to learn how Javascript works behind the
-              scenes.
-            </p>
-            <p class="paragraph">
-              Finally, we know it is the user who determines if our efforts worked. I’ve studied and
-              practiced advanced css and scss coding and file organization to be sure that great
-              coding is presented in a great UI. Many years of business experience with the Adobe
-              Creative Suite greatly enhances the capability for developing compelling UI’s.
-            </p>
-            <p class="paragraph">
-              <!-- See a list of skills and programs here. (link) -->
-              <a href="#" class="btn-text">See a list of skills and capabilities &rarr;</a>
-            </p>
-
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Intangibles
-            </h3>
-            <p class="paragraph">
-              Basic coding skill is the ticket for admission. But my value-added contribution is a
-              great work-ethic, integrity, maturity, truly enjoying and knowing how to work with
-              people, and a commitment to continuous learning, flexibility and a positive,
-              optimistic attitude toward life in general and toward coding projects in particular.
-              Oh, yes and I’m very modest, too!
-            </p>
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Availability
-            </h3>
-            <p class="paragraph">
-              I am available based on my committed project schedule. My ideal situation is to
-              contribute 20 – 40 hours per week working remotely most of the time. However, I am
-              willing to work on-site as needed in the Denver metropolitan area. I prefer working on
-              a contract basis but would consider contract to permanent if that makes sense.
-            </p>
-            <p class="paragraph">
-              <a href="#" class="btn-text">Print Resume &rarr;</a>
+              even Bill Gates had to start somewhere! I am enthusiatically looking for a place to
+              contribute in the development world!
             </p>
           </div>
-          <!-- <div class="col-1-of-2">
-            <div class="composition">
-              <img
-                class="composition__photo composition__photo--p1"
-                alt="Photo 1"
-                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
-                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px "
-                src="img/nat-1-large.jpg"
-              />
-              <img
-                class="composition__photo composition__photo--p2"
-                alt="Photo 2"
-                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px "
-                src="img/nat-2-large.jpg"
-              />
-              <img
-                class="composition__photo composition__photo--p3"
-                alt="Photo 3"
-                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px "
-                src="img/nat-3-large.jpg"
-              />
+
+          <div class="bio__container">
+            <figure class="bio__container-pic">
+              <img id="pic-1" class="bio__" src="img/TomKphoto.jpg" alt="TomK" />
+            </figure>
+
+            <div class="bio__content">
+              <h3 class="bio__content-title">
+                Background
+              </h3>
+              <p class="bio__content-text">
+                After successful careers in the airline, large retail management and financial
+                worlds, I decided to reinvent myself as a competent, excited and happy full-stack
+                web developer: a career that is a perfect fit for the work ethic, technical skills
+                and people skills I learned in those industries.
+              </p>
+              <p class="bio__content-text">
+                Built on the foundation of an intensive code development program at the University
+                of Denver along with a systematic process to hone those skills through a year of
+                intensive follow-up study and practice, I offer development skills that are a step
+                ahead of just the basics.
+              </p>
             </div>
-          </div> -->
+          </div>
+
+          <div class="bio__container" id="section-bio">
+            <div class="bio__content">
+              <h3 class="bio__content-title">
+                Skills
+              </h3>
+              <p class="bio__content-text">
+                Continuous learning and learning quickly is my most valuable skill. I can learn what
+                I need in a hurry and apply it to real-world situations immediately. That's how I
+                got a pilot's license and a stock broker's license, a real-estate license and
+                learned REACT.
+              </p>
+              <p class="bio__content-text">
+                Beyond that, I have specialized in mastering the skills and languages needed to be
+                that elusive true full stack web developer. This includes a special focus on SQL and
+                Mongo databases, Node.js, Express and React. I’ve developed React programs with
+                internal state, Redux and contextual APIs and know which work best in various
+                situations. I’ve also dug deeply into all the versions of Javascript and know when
+                to hoist and when not to hoist and took the time to learn how Javascript works
+                behind the scenes.
+              </p>
+              <p class="bio__content-text">
+                Finally, we all know it is the user who determines if our efforts worked. I’ve studied
+                and practiced advanced css and scss coding and file organization to be sure that
+                great coding is presented in a great UI. Many years of business experience with the
+                Adobe Creative Suite greatly enhances the capability for developing compelling UI’s.
+              </p>
+              <p class="bio__content-text">
+                <a href="#" class="btn-text">See a list of skills and capabilities &rarr;</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="bio__container">
+            <div class="bio__content">
+              <h3 class="bio__content-title">
+                Intangibles
+              </h3>
+              <p class="bio__content-text">
+                Basic coding skill is the ticket for admission. But my value-added contribution is a
+                great work-ethic, integrity, maturity, truly enjoying and knowing how to work with
+                people, a commitment to continuous learning, flexibility and a positive,
+                optimistic attitude toward life in general and toward coding projects in particular.
+                Oh, yes and I’m very modest, too!
+              </p>
+              <h3 class="bio__content-title" style="margin-top: 6rem">
+                Availability
+              </h3>
+              <p class="bio__content-text">
+                I am available immediately based on my committed project schedule. My ideal
+                situation is to contribute 20 – 40 hours per week working remotely most of the time.
+                However, I am willing to work on-site as needed in the Denver metropolitan area. I
+                prefer working on a contract basis but I am very flexible in working arrangements!
+              </p>
+            </div>
+            <figure class="bio__container-pic">
+              <img id="pic-2" class="bio__" src="img/trackPic.jpg" alt="TomK" />
+            </figure>
+          </div>
+          <p class="bio__content-text">
+            <a href="#" class="btn-text">Download my resume &rarr;</a>
+          </p>
         </div>
       </section>
 
-      <section class="section-features" id="section-features">
-        <div class="row">
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-world"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Explore the world
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, maiores?
-              </p>
-            </div>
-          </div>
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-compass"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Meet Nature
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, architecto ex?
-              </p>
-            </div>
-          </div>
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-map"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Find Your Way
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, tempora eligendi.
-              </p>
-            </div>
-          </div>
+      <section class="section-skills" id="section-skills">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Skills
+          </h2>
+        </div>
 
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-heart"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Live a Healthier Life
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, provident non?
-              </p>
+        <div class="skills__chart">
+         
+<div class="row">
+          <div class="wrap">
+            <div class="holder">
+              <div class="skills-chart-title">SERVER SIDE</div>
+              <div class="bar cf" data-percent="80%"><span class="label">MongoDb</span></div>
+              <div class="bar cf" data-percent="75%">
+                <span class="label light">Mongo Atlas</span>
+              </div>
+              <div class="bar cf" data-percent="95%"><span class="label">Node.js</span></div>
+              <div class="bar cf" data-percent="90%"><span class="label light">Express</span></div>
+              <div class="bar cf" data-percent="75%"><span class="label">Sequal Pro</span></div>
+              <div class="bar cf" data-percent="75%"><span class="label light">jQuery</span></div>
+              <div class="bar cf" data-percent="60%"><span class="label">Firebase</span></div>
+              <div class="bar cf" data-percent="34%"><span class="label light">PHP/Laravel</span></div>
+              <div class="bar cf" data-percent="34%"><span class="label">Typescript</span></div>
+
+              <div class="skills-chart-title">CLIENT SIDE</div>
+              <div class="bar cf" data-percent="90%"><span class="label light">REACT</span></div>
+              <div class="bar cf" data-percent="95%">
+                <span class="label">Javascript</span>
+              </div>
+              <div class="bar cf" data-percent="80%"><span class="label light">Jquery</span></div>
+              <div class="bar cf" data-percent="90%"><span class="label">CSS</span></div>
+              <div class="bar cf" data-percent="75%"><span class="label light">SCSS</span></div>
+              <div class="bar cf" data-percent="70%"><span class="label">Bootstrap</span></div>
+              <div class="bar cf" data-percent="95%"><span class="label light">HTML</span></div>
+              <div class="skills-chart-title">DESIGN</div>
+              <div class="bar cf" data-percent="85%"><span class="label">Adobe Illustrator</span></div>
+              <div class="bar cf" data-percent="90%"><span class="label light">Adobe Photoshop</span></div>
+              <div class="bar cf" data-percent="75%"><span class="label">Adobe Premier</span></div>
+              <div class="bar cf" data-percent="60%"><span class="label light">Adobe Audition</span></div>
+              <div class="skills-chart-title">ADMINISTRATION</div>
+              <div class="bar cf" data-percent="65%"><span class="label">MVR Modeling</span></div>
+              <div class="bar cf" data-percent="80%"><span class="label light">Git version control</span></div>
+              <div class="bar cf" data-percent="49%"><span class="label">Mocha Testing</span></div>
+              <div class="bar cf" data-percent="60%"><span class="label light">Domain and hosting</span></div>
+              
+
             </div>
+           
+
           </div>
         </div>
+        </div>
       </section>
+
+      
 
       <!-- <section class="section-projects"> -->
       <section class="section-projects">
@@ -524,10 +526,9 @@
         </div>
         <div class="col-1-of-2">
           <p class="footer__copyright">
-            Built by <a href="#" class="footer__link">Thomas Hurd</a> as a project focused on
-            <a href="#" class="footer__link">Advanced CSS and Sass. </a>
-            Copyright &copy; by Jonas Schmedmen. You are 100% allowed to use this webpage for both
-            personal and commercial use, but NOT to claim it as your own design.
+            <a href="#" class="footer__link"></a>
+            <a href="#" class="footer__link"> </a>
+            Copyright &copy; by thomaskdev
           </p>
         </div>
       </div>
