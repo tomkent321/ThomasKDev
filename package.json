@@ -12,5 +12,8 @@
   "devDependencies": {
     "concat": "^1.0.3",
     "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "jquery-visible": "^1.2.0"
   }
 }

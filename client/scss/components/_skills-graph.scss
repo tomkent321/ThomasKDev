@@ -1,14 +1,9 @@
 .skills {
   &__chart {
-    // background-color: greenyellow;
     width: 90%;
     margin: 0 auto;
   }
 }
-
-$red: #e74c3c;
-$redAL: rgba(231, 76, 60, 0.95);
-$dark: #3d3d3d;
 
 @mixin transition($transition-property, $transition-time, $method) {
   -webkit-transition: $transition-property $transition-time $method;
@@ -45,7 +40,7 @@ ul {
   }
 }
 .bar {
-  background: $color-primary;
+  background: $color-chart-bar;
   width: 0;
   margin: 0.25em 0;
   color: #fff;
@@ -54,22 +49,21 @@ ul {
   -webkit-transform: translate3d(0, 0, 0);
   clear: both;
   &:nth-of-type(2n) {
-    background: lighten($color-primary, 10%);
+    background: lighten($color-chart-bar, 10%);
   }
   .label {
     // font-size: 0.75em;
     font-size: 1.5rem;
     padding: 1rem;
-    // background: $dark;
-    background: $color-primary-dark;
-    width: 20rem;
+    background: $color-chart-label;
+    width: 15rem;
     display: inline-block;
     position: relative;
     z-index: 2;
     font-weight: bold;
     // font-family: $fontSans;
     &.light {
-      background: lighten($color-primary-dark, 10%);
+      background: lighten($color-chart-label, 10%);
     }
   }
 }
@@ -88,4 +82,13 @@ ul {
 .skills-chart-title {
 
   font-size: 2rem;
+  color: $color-grey-light-1;
+  // margin-bottom: 1rem;
+  // margin-top: 2rem;
+  margin: 2rem auto 1rem -3rem;
+  
+}
+
+.skills-heading {
+  color: $color-grey-light-1;
 }

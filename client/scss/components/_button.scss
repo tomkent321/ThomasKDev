@@ -39,6 +39,29 @@
     }
   }
 
+&--app {
+  
+  background-color: $color-primary;
+  color: white;
+  text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+&--code {
+  
+  background-color: $color-primary-dark;
+  color: white;
+  text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
   &--green {
     background-color: $color-primary;
     color: $color-white;

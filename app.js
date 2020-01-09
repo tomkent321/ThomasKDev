@@ -1,10 +1,13 @@
 //play header video after a delay
-
 document.addEventListener('DOMContentLoaded', function(event) {
   setTimeout(function() {
     document.getElementById('header-video').play();
   }, 2000);
 });
+
+
+
+
 
 //run the navigation page
 
@@ -17,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // on link click, toggle checkbox 'checked' state
   navLinks.forEach(link => link.addEventListener('click', _ => (navCheck.checked = false)));
 })();
+
+let chartLoaded = false;
 
 // for skills bar graph
 startChart = () => {
@@ -49,11 +54,11 @@ startChart = () => {
               if (now > 0 && now < 35) {
                 level = 'LEARNING';
               } else if (now >= 35 && now < 50) {
-                level = 'SOME PRACTICE';
+                level = 'KNOWLEDGEABLE';
               } else if (now >= 50 && now < 80) {
-                level = 'SIGNIFICANT PRACTICE';
+                level = 'MODERATE';
               } else if (now >= 80) {
-                level = 'HIGH EXPERIENCE';
+                level = 'HIGH';
               }
               $(this).text(`${level}`);
             }
@@ -61,18 +66,38 @@ startChart = () => {
         );
     });
   }, 500);
+
+  chartLoaded = true;
 };
 
 //reset Chart
 resetChart = () => {
   $('.bar').each(function(i) {
     var $bar = $(this);
-    // $bar.attr('');
-    // $(this).append('<span class="count"></span>');
-    // $bar.attr('data-percent', '0%');
     $bar.css('width', '0%');
     $('.count').hide();
   });
 };
 
-// startChart();
+// see if skills chart is in viewport
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function() {
+  if ($('.wrap').isInViewport()) {
+    if (!chartLoaded) {
+      startChart();
+    }
+  } else {
+    resetChart();
+    chartLoaded = false;
+  }
+});
+
+

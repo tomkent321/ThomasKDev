@@ -9,16 +9,21 @@
 }
 
 .section-skills {
-  padding: 20rem 0;
+  padding: 10rem 0;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.5),
-      rgba($color-primary-dark, 0.5)
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
-    url(/img/nat-4.jpg);
+    // url(/img/tools.jpg);
+      // url(/img/manandcomputer.jpg);
+      // url(/img/flyingbike.jpg);
+      url(/img/flyingbikeright.jpg);
+  // url(/img/flybike.jpg);
+  background-size: 50% 50%;
   background-size: cover;
   transform: skewY(-7deg);
-  margin-top: -9rem;
+  margin-top: 2rem;
   margin-bottom: 10rem;
 
   // This is the code to select the direct child ONLY
@@ -32,8 +37,6 @@
     margin-bottom: 7rem;
   }
 }
-
-
 
 .section-tours {
   background-color: $color-grey-light-1;
@@ -56,11 +59,7 @@
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(
-    to right bottom,
-    $color-primary-light,
-    $color-primary-dark
-  );
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
   @include respond(tab-port) {
     padding: 10rem 0;
   }
