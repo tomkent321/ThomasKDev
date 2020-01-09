@@ -36,13 +36,13 @@
     padding: 1rem;
 
     &-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: $color-theme-dark;
     }
 
     &-text {
       color: $color-grey-dark;
-      font-size: 1.75rem;
+      font-size: 2rem;
       margin-bottom: 1.2rem;
 
       @media only screen and (max-width: $bp-900) {

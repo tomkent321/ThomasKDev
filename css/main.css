@@ -1358,13 +1358,13 @@ body {
 }
 
 .bio__content-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #4e7d78;
 }
 
 .bio__content-text {
   color: #777;
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-bottom: 1.2rem;
 }
 
