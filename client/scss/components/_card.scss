@@ -25,6 +25,9 @@
 
     &--back {
       transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       // &-1 {
       //   background-image: linear-gradient(
@@ -102,6 +105,13 @@
       background-image: url(/img/contactkeeperB.jpg);
     }
 
+    &--6 {
+      background-image: url(/img/nexter.jpg);
+    }
+    &--7 {
+      background-image: url(/img/newtech.jpg);
+    }
+
     background-size: 100% 98%;
     background-repeat: no-repeat;
   }
@@ -158,6 +168,13 @@
         rgba($color-grey-dark-3, 1)
       );
     }
+    &--6 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 1),
+        rgba($color-grey-dark-3, 1)
+      );
+    }
   }
   &__details {
     height: 100%;
@@ -191,14 +208,12 @@
 
   &__cta {
     position: absolute;
-
-    //next 3 lines center on the parent element
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+    display: flex;
+    height: 100%;
     padding: 2rem;
     width: 90%;
     text-align: left;
+    flex-wrap: wrap;
   }
   &__price-box {
     text-align: left;
@@ -230,9 +245,15 @@
   }
 
   .card-buttons {
+    
     position: absolute;
-    bottom: 20px;
+    display: flex;
+    // // bottom: 2px;
     text-align: center;
+    // justify-content: flex-end;
+    align-content: flex-end;
+    // // margin-top: auto;
+    align-self: flex-end;
   }
 
   // Media Query ************************************
