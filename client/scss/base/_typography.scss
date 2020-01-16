@@ -84,6 +84,14 @@ font-weight: 700;
 text-transform: uppercase;
 }
 
+.heading-fourth {
+  font-size: 1.8rem;
+  font-weight: 400;
+  &-popup {
+    color: $color-grey-light-2;
+  }
+  }
+
 .paragraph {
 font-size: 1.6rem;
 &:not(:last-child) {

@@ -112,6 +112,10 @@
       background-image: url(/img/newtech.jpg);
     }
 
+    &--8 {
+      background-image: url(/img/clickPlane.jpg);
+    }
+
     background-size: 100% 98%;
     background-repeat: no-repeat;
   }
@@ -244,15 +248,22 @@
     font-weight: 100;
   }
 
+  .card__button-container {
+    display: flex;
+    // justify-content: center;
+    // align-content: center;
+    align-items: center;
+  }
+
   .card-buttons {
-    
     position: absolute;
     display: flex;
     // // bottom: 2px;
-    text-align: center;
-    // justify-content: flex-end;
-    align-content: flex-end;
-    // // margin-top: auto;
+    // text-align: center;
+    justify-self: center;
+    // justify-content: center;
+    margin-left: 2rem;
+    margin-right: auto;
     align-self: flex-end;
   }
 

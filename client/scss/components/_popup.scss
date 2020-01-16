@@ -4,19 +4,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.8);
+  // background-color: rgba($color-black, 0.8);
+
   z-index: 3000;
 
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
   // position: relative;
-  
 
-@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) 
-{-webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background-color: rgba($color-black, 0.3); }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
 
   &__content {
     @include centerItem;
@@ -24,6 +25,16 @@
     width: 75%;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-header-light, 0.7),
+        rgba($color-header-dark, 0.9)
+      ),
+      url(/img/heroNew2.jpg);
+    background-size: cover;
+    background-position: top;
+
     border-radius: $border-radius;
     display: table;
     overflow: hidden;
@@ -36,8 +47,6 @@
     }
   }
 
-  
-
   // use table w cells and vertical align middle to simulate equal height boxes
 
   &__left {
@@ -45,12 +54,10 @@
     // float: left;
     display: table-cell;
 
-    @include respond(tab-port) { 
+    @include respond(tab-port) {
       width: 100%;
       display: block;
-      
-     } 
-
+    }
   }
 
   &__right {
@@ -60,37 +67,37 @@
     vertical-align: middle;
     padding: 3rem 5rem;
 
-    @include respond(tab-port) { 
+    @include respond(tab-port) {
       width: 100%;
       display: inline-block;
       text-align: center;
       padding-top: 2rem;
-     } 
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
 
-    @include respond(tab-port) { 
+    @include respond(tab-port) {
       width: 50%;
       height: 285px;
       float: left;
       display: inline-block;
-     } 
+    }
 
-     @include respond(phone) { 
+    @include respond(phone) {
       width: 50%;
       height: 200px;
       float: left;
       display: inline-block;
-     } 
+    }
   }
 
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
-
+    color: $color-grey-light-2;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
@@ -104,15 +111,58 @@
     -webkit-hyphens: auto;
     hyphens: auto;
 
-
-    @include respond(tab-port) { 
-
+    @include respond(tab-port) {
       column-count: 1;
       text-align: left;
+    }
+  }
 
-     }
+  &__link {
+    text-decoration: none;
+    color: $color-grey-light-2;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 2rem;
+    width: 10%;
 
+    &-app, &-code {
+      background-color: $color-primary;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 2px;
+      display: block;
+      border-radius: 5px;
+      // margin-right: 1rem;
+    }
+    &-code {
+      background-color: $color-primary-dark;
+    }
+  }
 
+  table,
+  th,
+  td {
+    border: 1px solid $color-primary;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  table {
+    border-spacing: 5px;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 1),
+        rgba($color-grey-dark-3, 1)
+      );
+  }
+  
+  &__name {
+    color: $color-grey-light-2
+  }
+  &__describe {
+    color: $color-grey-light-2;
+    text-align: left;
   }
 
   // Open state
