@@ -39,28 +39,26 @@
     }
   }
 
-&--app {
-  
-  background-color: $color-primary;
-  color: white;
-  text-transform: uppercase;
+  &--app {
+    background-color: $color-primary;
+    color: white;
+    text-transform: uppercase;
     text-decoration: none;
     padding: 15px 20px;
     display: inline-block;
     border-radius: 10px;
     margin-right: 1rem;
-}
+  }
 
-&--code {
-  
-  background-color: $color-primary-dark;
-  color: white;
-  text-transform: uppercase;
+  &--code {
+    background-color: $color-primary-dark;
+    color: white;
+    text-transform: uppercase;
     text-decoration: none;
     padding: 15px 20px;
     display: inline-block;
     border-radius: 10px;
-}
+  }
 
   &--green {
     background-color: $color-primary;
@@ -75,7 +73,7 @@
     color: $color-white;
     // animation: fadeInSlow 3s ease-in;
     // animation-delay: 8s;
-   
+
     animation: fadeInSlow 11s ease-in;
 
     &::after {
@@ -129,4 +127,8 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
     transform: translateY(0px);
   }
+}
+
+.contact-submit {
+  text-align: center;
 }
