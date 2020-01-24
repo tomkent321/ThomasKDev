@@ -10,28 +10,16 @@
 
 .section-skills {
   padding: 10rem 0;
-  // background-image:
-  // linear-gradient(
-  //     to right bottom,
-  //     rgba($color-primary-light, 0.8),
-  //     rgba($color-primary-dark, 0.8)
-  //   ),
-
-  // url(/img/skillsbac.png);
 
   background: url(/img/skillsbac.png) no-repeat center fixed,
     linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      )
-      ;
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
 
   background-size: 95vw auto;
-  // background-repeat: no-repeat;
   transform: skewY(-7deg);
-  // margin-top: 2rem;
-  // margin-bottom: 10rem;
 
   // This is the code to select the direct child ONLY
 
