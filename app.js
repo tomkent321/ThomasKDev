@@ -30,7 +30,7 @@ startChart = () => {
         let winWidth = window.innerWidth > 0 ? window.innerWidth : screen.width;
 
         let ww = $bar.attr('data-percent');
-        // let wpct = parseFloat($bar.attr('data-percent'));
+
         if (winWidth < 750) {
           let wpct = parseFloat($bar.attr('data-percent'));
           if (wpct > 0 && wpct < 35) {

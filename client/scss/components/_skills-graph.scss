@@ -21,22 +21,20 @@
   margin: 0 auto;
 }
 
-ul {
-  li {
-    line-height: 2;
-    font-weight: bold;
-    // font-family: $fontSans;
-    // font-size: 0.85em;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    clear: both;
-    // border-bottom: 1px solid $border;
-    &:before {
-      content: '\2023';
-      padding: 0 1em 0 0;
-    }
-  }
-}
+// ul {
+//   li {
+//     line-height: 2;
+//     // line-height: 1;
+//     font-weight: bold;
+//     font-size: 1.6rem;
+//     text-transform: uppercase;
+//     clear: both;
+//     &:before {
+//       content: '\2023';
+//       padding: 0 1em 0 0;
+//     }
+//   }
+// }
 .bar {
   background: $color-chart-bar;
   width: 0;
@@ -70,11 +68,8 @@ ul {
   right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
-  // margin: auto;
-  // padding: 0.15em;
   font-size: 1.2rem;
-  // font-weight: bold;
-  // font-family: $fontSans;
+  // font-size: 1.4rem;
 }
 
 .skills-chart-title {
