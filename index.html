@@ -65,9 +65,7 @@
           <span class="heading-primary--main">CODE ARTISTRY</span>
           <span class="heading-primary--sub">INFORMATION TO INSPIRATION</span>
         </h1>
-        <!-- <a href="#section-tours" class="btn btn--theme btn--animated" id="push-btn"
-          >PUSH TO START</a
-        > -->
+       
         <a href="#section-bio" class="btn btn--theme" id="push-btn">PUSH TO START</a>
       </div>
       <div class="bg-video" id="videoshow">
@@ -99,8 +97,16 @@
 
           <div class="bio__container">
             <figure class="bio__container-pic">
-              <img id="pic-2" class="bio__" src="img/trackPic.jpg" alt="TomK" />
+              <div>
+                <img id="pic-2" class="bio__" src="img/trackPic.jpg" alt="TomK" />
+              </div>
+              <div>
+                <img id="pic-1" class="bio__" src="img/TomKphoto.jpg" alt="TomK" />
+              </div>
             </figure>
+            <!-- <figure class="bio__container-pic">
+              <img  id="pic-1" class="bio__" src="img/TomKphoto.jpg" alt="TomK" />
+            </figure> -->
 
             <div class="bio__content">
               <h3 class="bio__content-title">
@@ -177,14 +183,11 @@
                 However, I am willing to work on-site as needed in the Denver metropolitan area. I
                 prefer working on a contract basis but I am very flexible in working arrangements!
               </p>
+              <p class="bio__content-text">
+                <a href="/thomaskresume.pdf" class="btn-text" download>Download my resume &rarr;</a>
+              </p>
             </div>
-            <!-- <figure class="bio__container-pic">
-              <img id="pic-2" class="bio__" src="img/trackPic.jpg" alt="TomK" />
-            </figure> -->
           </div>
-          <p class="bio__content-text">
-            <a href="#" class="btn-text">Download my resume &rarr;</a>
-          </p>
         </div>
       </section>
 
@@ -196,7 +199,8 @@
         </div>
 
         <div class="skills__chart">
-          <div class="row">
+          <!-- <div class="row"> -->
+          <div >
             <div class="wrap">
               <div class="holder">
                 <div class="skills-chart-title">SERVER SIDE</div>
@@ -251,6 +255,7 @@
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -757,39 +762,51 @@
                 </div>
                 <div class="column-container">
                   <div class="form-column">
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Your Name"
-                    id="name"
-                    required
-                  />
-                  <label for="name" class="form__label">Your Name</label>
-                </div>
-                <div class="form__group">
-                  <input type="email" class="form__input" placeholder="Email" id="email" required />
-                  <label for="email" class="form__label">Email</label>
-                </div>
-                <div class="form__group">
-                  <input type="phone" class="form__input" placeholder="Phone" id="phone" required />
-                  <label for="phone" class="form__label">Email</label>
-                </div>
-              </div>
+                    <div class="form__group">
+                      <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Your Name"
+                        id="name"
+                        required
+                      />
+                      <label for="name" class="form__label">Your Name</label>
+                    </div>
+                    <div class="form__group">
+                      <input
+                        type="email"
+                        class="form__input"
+                        placeholder="Email"
+                        id="email"
+                        required
+                      />
+                      <label for="email" class="form__label">Email</label>
+                    </div>
+                    <div class="form__group">
+                      <input
+                        type="phone"
+                        class="form__input"
+                        placeholder="Phone"
+                        id="phone"
+                        required
+                      />
+                      <label for="phone" class="form__label">Email</label>
+                    </div>
+                  </div>
 
-              <div class="form-column">
-                <div class="form__group">
-                <textarea class="form__input" placeholder="Message" name="message" id="message"  ></textarea>
-                <label for="message" class="form__label">Message</label>
-              </div>
-              </div>
-
-
-
-            </div>
-                <div class="form__group u-margin-bottom-medium">
-                 
+                  <div class="form-column">
+                    <div class="form__group">
+                      <textarea
+                        class="form__input"
+                        placeholder="Message"
+                        name="message"
+                        id="message"
+                      ></textarea>
+                      <label for="message" class="form__label">Message</label>
+                    </div>
+                  </div>
                 </div>
+                <div class="form__group u-margin-bottom-medium"></div>
 
                 <div class="form__group contact-submit">
                   <button class="btn btn--green ">Launch&rarr;</button>
@@ -838,7 +855,7 @@
             </ul>
           </div>
         </div> -->
-        <div >
+        <div>
           <p class="footer__copyright">
             <a href="#" class="footer__link"></a>
             <a href="#" class="footer__link">Copyright &copy; by thomaskdev </a>
@@ -870,7 +887,7 @@
 
             <tr>
               <td class="popup__name">Dice Game</td>
-              <td class="popup__describe" style="text-align: left" >
+              <td class="popup__describe" style="text-align: left">
                 Very basic Javascript, Nodejs
               </td>
 
@@ -896,7 +913,7 @@
 
             <tr>
               <td class="popup__name">Travel Site UI</td>
-              <td class="popup__describe" style="text-align: left" >
+              <td class="popup__describe" style="text-align: left">
                 Advanced CSS/Sass driven site using flex for responsiveness
               </td>
 
@@ -921,7 +938,7 @@
             </tr>
             <tr>
               <td class="popup__name">Connect Lab UI</td>
-              <td class="popup__describe" style="text-align: left" >
+              <td class="popup__describe" style="text-align: left">
                 Advanced CSS/Bootstrap UI with animations and responsiveness
               </td>
 
@@ -947,7 +964,7 @@
 
             <tr>
               <td class="popup__name">Friend Finder</td>
-              <td class="popup__describe" style="text-align: left" >
+              <td class="popup__describe" style="text-align: left">
                 Whimsical little app using Nodejs, express and javascript. Read the fine print!
               </td>
 
@@ -973,7 +990,7 @@
 
             <tr>
               <td class="popup__name">Blogen</td>
-              <td class="popup__describe" style="text-align: left" >
+              <td class="popup__describe" style="text-align: left">
                 Basic UI for a blog using css/bootstrap
               </td>
 
@@ -999,7 +1016,7 @@
 
             <tr>
               <td class="popup__name">Portfolio Grid</td>
-              <td class="popup__describe" style="text-align: left" >
+              <td class="popup__describe" style="text-align: left">
                 Another practice project. Basic UI for a portfolio using css/bootstrap
               </td>
 
@@ -1022,16 +1039,17 @@
                 >
               </td>
             </tr>
-
           </table>
 
-        <div class="u-center-text">
-          <a href="https://github.com/tomkent321" target="_blank" class="btn btn--green u-margin-top-medium"
-            >My gitHub repo</a
-          >
-        </div>
-;
-
+          <div class="u-center-text">
+            <a
+              href="https://github.com/tomkent321"
+              target="_blank"
+              class="btn btn--green u-margin-top-medium"
+              >My gitHub repo</a
+            >
+          </div>
+          ;
         </div>
       </div>
     </div>

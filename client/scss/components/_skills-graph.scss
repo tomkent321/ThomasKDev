@@ -16,12 +16,10 @@
   box-sizing: border-box;
 }
 
-
 .wrap {
   width: 90%;
   margin: 0 auto;
 }
-
 
 ul {
   li {
@@ -69,7 +67,7 @@ ul {
 }
 .count {
   position: absolute;
-  right: .1em;
+  right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
   // margin: auto;
@@ -80,13 +78,11 @@ ul {
 }
 
 .skills-chart-title {
-
   font-size: 2rem;
   color: $color-grey-light-1;
   // margin-bottom: 1rem;
   // margin-top: 2rem;
   margin: 2rem auto 1rem -3rem;
-  
 }
 
 .skills-heading {

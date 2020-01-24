@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
   }, 2000);
 });
 
-
-
-
-
 //run the navigation page
 
 (function() {
@@ -31,8 +27,23 @@ startChart = () => {
 
       $(this).append('<span class="count"></span>');
       setTimeout(function() {
-        var pct = $bar.attr('data-percent');
-        $bar.css('width', $bar.attr('data-percent'));
+        let winWidth = window.innerWidth > 0 ? window.innerWidth : screen.width;
+
+        let ww = $bar.attr('data-percent');
+        // let wpct = parseFloat($bar.attr('data-percent'));
+        if (winWidth < 750) {
+          let wpct = parseFloat($bar.attr('data-percent'));
+          if (wpct > 0 && wpct < 35) {
+            ww = '55%';
+          } else if (wpct >= 35 && wpct < 50) {
+            ww = '65%';
+          } else if (wpct >= 50 && wpct < 80) {
+            ww = '75%';
+          } else if (wpct >= 80) {
+            ww = '85%';
+          }
+        }
+        $bar.css('width', ww);
       }, i * 100);
     });
 
@@ -54,11 +65,11 @@ startChart = () => {
               if (now > 0 && now < 35) {
                 level = 'LEARNING';
               } else if (now >= 35 && now < 50) {
-                level = 'KNOWLEDGEABLE';
+                level = 'KNOWLEDGABLE';
               } else if (now >= 50 && now < 80) {
-                level = 'MODERATE';
-              } else if (now >= 80) {
                 level = 'HIGH';
+              } else if (now >= 80) {
+                level = 'VERY HIGH';
               }
               $(this).text(`${level}`);
             }
@@ -99,5 +110,3 @@ $(window).on('resize scroll', function() {
     chartLoaded = false;
   }
 });
-
-
