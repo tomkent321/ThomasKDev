@@ -6,6 +6,11 @@
   left: 0;
   // background-color: rgba($color-black, 0.8);
 
+
+  .heading-secondary{
+    color:$color-grey-light-1;
+    text-shadow: 2px 2px 6px rgba(#000000, .3);
+  }
   z-index: 3000;
 
   opacity: 0;
@@ -23,15 +28,15 @@
     @include centerItem;
 
     width: 75%;
-    background-color: $color-white;
+    background-color: rgba($color-white, .01);
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
 
     background-image: linear-gradient(
         to right bottom,
-        rgba($color-header-light, 0.7),
-        rgba($color-header-dark, 0.9)
-      ),
-      url(/img/heroNew2.jpg);
+        rgba($color-header-light, 0.4),
+        rgba($color-header-dark, 0.3)
+      );
+      // url(/img/heroNew2.jpg);
     background-size: cover;
     background-position: top;
 
@@ -144,25 +149,29 @@
   th,
   td {
     border: 1px solid $color-primary;
-    padding: 5px;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px;
     text-align: center;
     font-size: 1.6rem;
   }
   table {
-    border-spacing: 5px;
+    // border-spacing: 1px;
     background-image: linear-gradient(
         to right bottom,
-        rgba($color-primary, 1),
-        rgba($color-grey-dark-3, 1)
+        rgba($color-grey-light-1, 1),
+        rgba($color-grey-light-2, 1)
       );
   }
   
   &__name {
-    color: $color-grey-light-2
+    color: $color-grey-dark-3
   }
   &__describe {
-    color: $color-grey-light-2;
+    color: $color-grey-dark-3;
     text-align: left;
+    font-weight: 300;
   }
 
   // Open state
@@ -180,7 +189,7 @@
   &__close {
     &:link,
     &:visited {
-      color: $color-grey-dark;
+      color: $color-grey-light-1;
       position: absolute;
       top: 2.5rem;
       right: 2.5rem;

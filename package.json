@@ -1,11 +1,12 @@
 {
-  "name": "natours",
+  "name": "thomaskdev",
   "version": "1.0.0",
   "description": "Landing page for natours",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "concat:css": "concat -o css/style.css css/icon-font.css css/main.css"
+    "concat:css": "concat -o css/style.css css/icon-font.css css/main.css",
+    "start": "node server.js"
   },
   "author": "Thomas",
   "license": "ISC",
@@ -14,6 +15,9 @@
     "node-sass": "^4.12.0"
   },
   "dependencies": {
-    "jquery-visible": "^1.2.0"
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "jquery-visible": "^1.2.0",
+    "mongoose": "^5.8.9"
   }
 }

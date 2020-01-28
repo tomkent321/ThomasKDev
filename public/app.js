@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(event) {
   setTimeout(function() {
     document.getElementById('header-video').play();
+    console.log('header video commanded');
   }, 2000);
 });
 
@@ -109,4 +110,10 @@ $(window).on('resize scroll', function() {
     resetChart();
     chartLoaded = false;
   }
+});
+
+//handle contact message
+
+$('#submit-contact').click(function(e) {
+  console.log('Submit pushed!');
 });

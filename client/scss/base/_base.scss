@@ -33,6 +33,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
+  background-color: $color-grey-light-2;
 
   @include respond(tab-port) {
     padding: 0;
