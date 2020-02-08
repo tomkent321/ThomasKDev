@@ -10,12 +10,18 @@
 
 .section-skills {
   padding: 10rem 0 10rem 0;
-  background: url(/img/skillsbac.png) no-repeat center fixed,
-    linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    );
+  // background: url(/img/skillsbac.png) no-repeat center fixed,
+  //   linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 0.8),
+  //     rgba($color-primary-dark, 0.8)
+  //   );
+
+  background: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)
+  );
 
   background-size: 95vw auto;
   transform: skewY(-7deg);
@@ -61,15 +67,23 @@
 .book {
   width: 95%;
   margin: auto;
-  background-image: linear-gradient(transparent 0%), url(/img/launch.jpg);
-  // background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 95% 98%;
-  background-size: cover;
-  background-position: center;
-  border-radius: $border-radius;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  
+  // background-image: linear-gradient(transparent 0%), url(/img/launch.jpg);
+  // // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-size: 95% 98%;
+  // background-size: cover;
+  // background-position: center;
+  // border-radius: $border-radius;
+  // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  background: url(/img/launch.jpg) no-repeat center fixed,
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
+
+  background-size: 95vw auto;
 
   @include respond(tab-land) {
     background-image: linear-gradient(

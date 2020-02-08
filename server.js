@@ -1,5 +1,13 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const path = require('path');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const Contact = require('./models/Contact');
+
 const port = process.env.PORT || 5001;
 
 // app.use(express.static('.'));
@@ -29,3 +37,23 @@ const connectDB = async () => {
 };
 
 connectDB();
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.post('/addContact', (req, res) => {
+  // console.log('res', res);
+  var myData = new Contact(req.body);
+  myData
+    .save()
+
+    .then(item => {
+      // res.send('Contact saved to database');
+      res.redirect('/');
+      // res.end();
+      // res.render('success')
+    })
+    .catch(err => {
+      res.status(400).send('Unable to save to database');
+    });
+});

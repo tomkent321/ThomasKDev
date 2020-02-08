@@ -18,7 +18,7 @@
 
     <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
 
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -26,8 +26,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js" defer></script>
-    <!-- <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/main.css" /> -->
 
     <title>ThomasKDevelopers</title>
   </head>
@@ -200,7 +198,12 @@
           </h2>
         </div>
 
-        <div class="skills__chart">
+
+                
+        <div id="skillsBack" class="skills__chart" >
+        <!-- <div id="skillsBack" class="skills__chart" style="background: url(/img/skier.png) no-repeat center fixed; background-size: 85vw auto;"> -->
+        <!-- <div class="skills__chart" > -->
+        
           <!-- <div class="row"> -->
           <div >
             <div class="wrap">
@@ -762,7 +765,8 @@
         <div class="row">
           <div class="book">
             <div class="book__form">
-              <form action="/api/contacts" method="post" class="form">
+              <!-- <form action="/contact" method="post" class="form"> -->
+              <form  method="post" action="/addContact" class="form">
                 <div class="u-margin-bottom-medium">
                   <h2 class="heading-secondary">
                     Contact Me
@@ -775,7 +779,7 @@
                         type="text"
                         class="form__input"
                         placeholder="Your Name"
-                        id="name"
+                        name="name"
                         required
                       />
                       <label for="name" class="form__label">Your Name</label>
@@ -785,7 +789,7 @@
                         type="email"
                         class="form__input"
                         placeholder="Email"
-                        id="email"
+                        name="email"
                         required
                       />
                       <label for="email" class="form__label">Email</label>
@@ -794,8 +798,8 @@
                       <input
                         type="phone"
                         class="form__input"
-                        placeholder="Phone"
-                        id="phone"
+                        placeholder="Phone (optional)"
+                        name="phone"
                         
                       />
                       <label for="phone" class="form__label">Phone</label>
@@ -804,12 +808,12 @@
 
                   <div class="form-column">
                     <div class="form__group">
-                      <textarea
+                      <input
                         class="form__input"
                         placeholder="Message"
                         name="message"
                         id="message"
-                      ></textarea>
+                      />
                       <label for="message" class="form__label">Message</label>
                     </div>
                   </div>
@@ -817,10 +821,14 @@
                 <div class="form__group u-margin-bottom-medium"></div>
 
                 <div class="form__group contact-submit">
-                  <button id='submit-contact' class="btn btn--green ">Launch&rarr;</button>
+                  <input type="submit" value="Push to Launch" class="btn btn--green" onclick="confirm('Thankyou! I will contact you as soon as possible!')">
                   
                 </div>
+
+
               </form>
+
+             
              
             </div>
           </div>

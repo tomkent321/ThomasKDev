@@ -1,3 +1,27 @@
+let toggle = 2;
+
+changeBack = () => {
+  if (toggle === 1) {
+    const bike = {
+      background: 'url(/img/skillsbac.png) no-repeat center fixed',
+      backgroundSize: '85vw auto'
+    };
+
+    $('#skillsBack').css(bike);
+    toggle = 2;
+  } else {
+    const skier = {
+      background: 'url(/img/skier.png) no-repeat center fixed',
+      backgroundSize: '85vw auto'
+    };
+
+    $('#skillsBack').css(skier);
+    toggle = 1;
+  }
+};
+
+changeBack();
+
 //play header video after a delay
 document.addEventListener('DOMContentLoaded', function(event) {
   setTimeout(function() {
@@ -104,6 +128,7 @@ $.fn.isInViewport = function() {
 $(window).on('resize scroll', function() {
   if ($('.wrap').isInViewport()) {
     if (!chartLoaded) {
+      changeBack();
       startChart();
     }
   } else {
@@ -112,8 +137,75 @@ $(window).on('resize scroll', function() {
   }
 });
 
+//change skills background
+
+// $('.skills_chart').css('background', 'url(/img/skier.png) no-repeat center fixed');
+
 //handle contact message
 
-$('#submit-contact').click(function(e) {
+$('#submit-contact').click(function() {
+  // e.prevenDefault();
+
+  // const name = $('#name').val();
+  const email = $('#email').val();
+  // const phone = $('#phone').val();
+  // const message = $('#message').val();
+
+  // const NewContact = {
+  //   name: this.name,
+  //   email: this.email,
+  //   phone: this.phone,
+  //   message: this.message
+  // };
+
   console.log('Submit pushed!');
+  console.log(email);
+  // console.log(email);
 });
+
+// if (email === '' || name === '') {
+//   setAlert('Please enter all fields', 'danger');
+// } else {
+//   login({
+//     email,
+//     password
+//   });
+// }
+// });
+
+// @route   POST api/contacts
+// @desc    Add new contact
+// @access  Private
+// router.post(
+//   '/contact',
+//   [
+//     auth,
+//     [
+//       check('name', 'Name is required')
+//         .not()
+//         .isEmpty()
+//     ]
+//   ],
+//   async (req, res) => {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//       return res.status(400).json({ errors: errors.array() });
+//     }
+//     const { name, email, phone, type } = req.body;
+//     try {
+//       const newContact = new Contact({
+//         name,
+//         email,
+//         phone,
+//         message,
+//         user: req.user.id
+//       });
+
+//       const contact = await newContact.save();
+//       res.json(contact);
+//     } catch (err) {
+//       console.error('err.message');
+//       res.status(500).send('Server Error');
+//     }
+//   }
+// );
