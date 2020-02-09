@@ -1051,6 +1051,12 @@ body {
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 75em) {
+  .form__group:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
 .form__input {
   font-size: 2rem;
   font-family: inherit;
@@ -1170,26 +1176,39 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
 }
 
+@media only screen and (max-width: 75em) {
+  .column-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
 .form-column {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
   padding: 2rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 75em) {
+  .form-column {
+    padding: 0rem;
+    width: 100%;
+  }
 }
 
 #message {
-  width: 100%;
+  width: 95%;
   height: 29rem;
   font-size: 2rem;
   font-family: inherit;
@@ -1199,11 +1218,16 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 100%;
   display: block;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media only screen and (max-width: 75em) {
+  #message {
+    height: 19rem;
+  }
 }
 
 .popup {
@@ -2114,14 +2138,6 @@ body {
   background-size: 95vw auto;
 }
 
-@media only screen and (max-width: 75em) {
-  .book {
-    background-image: -o-linear-gradient(345deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(/img/nat-10.jpg);
-    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(/img/nat-10.jpg);
-    background-size: cover;
-  }
-}
-
 @media only screen and (max-width: 56.25em) {
   .book {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(/img/nat-10.jpg);
@@ -2134,12 +2150,6 @@ body {
 .book__form {
   width: 95%;
   padding: 6rem;
-}
-
-@media only screen and (max-width: 75em) {
-  .book__form {
-    width: 65%;
-  }
 }
 
 @media only screen and (max-width: 56.25em) {

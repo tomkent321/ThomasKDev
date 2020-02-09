@@ -1,6 +1,10 @@
 .form {
   &__group:not(:last-child) {
     margin-bottom: 2rem;
+
+    @include respond(tab-land) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__input {
@@ -104,19 +108,32 @@
 
 .column-container {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    // width: 85vw;
+    width: 100%;
+  }
 }
 
 .form-column {
-  flex: 50%;
+  // flex: 50%;
   padding: 2rem;
   align-self: center;
+  width: 100%;
+
+  @include respond(tab-land) {
+    // flex: 100%;
+    padding: 0rem;
+    width: 100%;
+  }
 }
 
 #message {
-  width: 100%;
+  width: 95%;
   height: 29rem;
   font-size: 2rem;
   font-family: inherit;
@@ -127,9 +144,13 @@
   background-color: rgba($color-white, 0.8);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 100%;
   display: block;
   transition: all 0.3s;
+
+  @include respond(tab-land) {
+    height: 19rem;
+  }
+
   // margin-left: 6rem;
 
   // &:focus {
