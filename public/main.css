@@ -403,7 +403,7 @@ body {
   margin-right: 1rem;
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
 }
 
 .btn--code {
@@ -417,7 +417,7 @@ body {
   border-radius: 5px;
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 5%;
 }
 
 .btn--green {
@@ -774,6 +774,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card .card-buttons a {
@@ -2138,18 +2141,28 @@ body {
   background-size: 95vw auto;
 }
 
+@media only screen and (max-width: 75em) {
+  .book {
+    background: url(/img/launch.jpg) no-repeat center, -webkit-gradient(linear, left top, right bottom, from(rgba(129, 186, 180, 0.8)), to(rgba(78, 125, 120, 0.8)));
+    background: url(/img/launch.jpg) no-repeat center, -o-linear-gradient(left top, rgba(129, 186, 180, 0.8), rgba(78, 125, 120, 0.8));
+    background: url(/img/launch.jpg) no-repeat center, linear-gradient(to right bottom, rgba(129, 186, 180, 0.8), rgba(78, 125, 120, 0.8));
+    background-size: 95vw auto;
+    padding: 2rem;
+  }
+}
+
 @media only screen and (max-width: 56.25em) {
   .book {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(/img/nat-10.jpg);
-    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(/img/nat-10.jpg);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(/img/nat-10.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(129, 186, 180, 0.9)), to(rgba(78, 125, 120, 0.9)));
+    background-image: -o-linear-gradient(left, rgba(129, 186, 180, 0.9) 0%, rgba(78, 125, 120, 0.9) 100%);
+    background-image: linear-gradient(to right, rgba(129, 186, 180, 0.9) 0%, rgba(78, 125, 120, 0.9) 100%);
     background-size: cover;
   }
 }
 
 .book__form {
   width: 95%;
-  padding: 6rem;
+  padding: 2rem;
 }
 
 @media only screen and (max-width: 56.25em) {

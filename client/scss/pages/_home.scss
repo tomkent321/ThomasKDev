@@ -59,6 +59,7 @@
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
   @include respond(tab-port) {
     padding: 10rem 0;
   }
@@ -78,17 +79,22 @@
   background-size: 95vw auto;
 
   @include respond(tab-land) {
-    
-   
+    background: url(/img/launch.jpg) no-repeat center,
+      linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      );
+    background-size: 95vw auto;
+    padding: 2rem;
   }
 
   @include respond(tab-port) {
     background-image: linear-gradient(
-        to right,
-        rgba($color-white, 0.9) 0%,
-        rgba($color-white, 0.9) 100%
-      ),
-      url(/img/nat-10.jpg);
+      to right,
+      rgba($color-primary-light, 0.9) 0%,
+      rgba($color-primary-dark, 0.9) 100%
+    );
     background-size: cover;
   }
 
@@ -97,7 +103,7 @@
 
   &__form {
     width: 95%;
-    padding: 6rem;
+    padding: 2rem;
 
     // @include respond(tab-land) {
     //   width: 65%;
