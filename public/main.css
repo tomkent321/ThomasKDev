@@ -397,13 +397,14 @@ body {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5rem 1.55rem;
+  padding: 0.5rem 0.5rem;
   display: inline-block;
   border-radius: 5px;
   margin-right: 1rem;
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  right: 60px;
+  width: 45px;
 }
 
 .btn--code {
@@ -411,13 +412,13 @@ body {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 20px;
-  padding: 0.5rem 1.55rem;
+  padding: 0.5rem 0.5rem;
   display: inline-block;
   border-radius: 5px;
   position: absolute;
   bottom: 20px;
-  right: 5%;
+  right: 15px;
+  width: 45px;
 }
 
 .btn--green {
@@ -602,11 +603,10 @@ body {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  min-height: 52rem;
 }
 
 .card__side {
-  height: 52rem;
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
@@ -654,9 +654,9 @@ body {
 .card__picture {
   background-size: cover;
   height: 23rem;
+  height: 40%;
   background-blend-mode: screen;
   overflow: hidden;
-  border-radius: 5px;
   background-size: 100% 98%;
   background-repeat: no-repeat;
 }
@@ -714,7 +714,7 @@ body {
 }
 
 .card__details {
-  height: 100%;
+  height: 25rem;
   padding: 3rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(82, 160, 153, 0.7)), to(rgba(51, 51, 51, 0.8)));
   background-image: -o-linear-gradient(left top, rgba(82, 160, 153, 0.7), rgba(51, 51, 51, 0.8));
@@ -816,8 +816,6 @@ body {
   .card__side--back {
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
-    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   }
   .card:hover .card__side--front {
     -webkit-transform: rotateY(0);
@@ -1637,6 +1635,257 @@ body {
   color: #f7f7f7;
 }
 
+.section-project {
+  background-color: lightgrey;
+}
+
+.project__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 95vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: calc(22vw * 1.75);
+  width: 22vw;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  margin-bottom: 3rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 75em) {
+  .flip-card {
+    height: calc(30vw * 1.75);
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .flip-card {
+    height: calc(45vw * 1.75);
+    width: 45vw;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .flip-card {
+    height: calc(55vw * 1.75);
+    width: 55vw;
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  -o-transition: transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #f2efef;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card-sum {
+  font-size: 1.3rem;
+  height: 60%;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(82, 160, 153, 0.7)), to(rgba(51, 51, 51, 0.8)));
+  background-image: -o-linear-gradient(left top, rgba(82, 160, 153, 0.7), rgba(51, 51, 51, 0.8));
+  background-image: linear-gradient(to right bottom, rgba(82, 160, 153, 0.7), rgba(51, 51, 51, 0.8));
+  background-attachment: fixed;
+  background-size: cover;
+  color: #f7f7f7;
+}
+
+.flip-card-sum ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flip-card-sum ul li {
+  text-align: left;
+  font-size: 1.4rem;
+  padding: 0.75rem;
+}
+
+.flip-card-sum ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.flip-card-title {
+  padding: 1rem;
+}
+
+.flip-card-back-title {
+  margin-top: 2rem;
+  color: #4e7d78;
+}
+
+.flip-card-picture {
+  background-size: cover;
+  height: 40%;
+  background-blend-mode: screen;
+  overflow: hidden;
+}
+
+.flip-card-picture--1 {
+  background-image: url(/img/devcon.jpg);
+}
+
+.flip-card-picture--2 {
+  background-image: url(/img/githubfinder.jpg);
+}
+
+.flip-card-picture--3 {
+  background-image: url(/img/budgetApp.jpg);
+}
+
+.flip-card-picture--4 {
+  background-image: url(/img/recipeApp.jpg);
+}
+
+.flip-card-picture--5 {
+  background-image: url(/img/contactkeeperB.jpg);
+}
+
+.flip-card-picture--6 {
+  background-image: url(/img/nexter.jpg);
+}
+
+.flip-card-picture--7 {
+  background-image: url(/img/newtech.jpg);
+}
+
+.flip-card-picture--8 {
+  background-image: url(/img/clickPlane.jpg);
+}
+
+.flip-card-back-detail {
+  background-color: #f7f7f7;
+  height: 85%;
+  padding-top: 1rem;
+}
+
+.flip-card-back-detail ul {
+  padding: 2rem;
+  text-align: left;
+  color: black;
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 87.5em) {
+  .flip-card-back-detail ul {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .flip-card-back-detail ul {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .flip-card-back-detail ul {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .flip-card-back-detail ul {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .flip-card-back-detail ul {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .flip-card-back-detail ul {
+    font-size: 1.5rem;
+  }
+}
+
+.flip-card-back-detail ul li {
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.flip-card-buttons {
+  height: 15%;
+}
+
+.flip-btn--app,
+.flip-btn--code {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.flip-btn--app {
+  background-color: #81bab4;
+  height: 50%;
+  border-bottom: 1px solid white;
+}
+
+.flip-btn--code {
+  background-color: #4e7d78;
+  height: 50%;
+}
+
 .header {
   height: 85vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 76, 77, 0.7)), to(rgba(2, 32, 34, 0.7))), url(/img/heroNew2.jpg);
@@ -2104,6 +2353,16 @@ body {
 
 @media only screen and (max-width: 56.25em) {
   .section-projects {
+    padding: 20rem 0 10rem 0;
+  }
+}
+
+.section-project {
+  padding: 2rem 0 15rem 0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section-project {
     padding: 20rem 0 10rem 0;
   }
 }

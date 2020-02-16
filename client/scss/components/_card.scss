@@ -4,10 +4,10 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem; // required to make perspective work
+  min-height: 52rem; // required to make perspective work
 
   &__side {
-    height: 52rem;
+    // height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -44,9 +44,10 @@
   &__picture {
     background-size: cover;
     height: 23rem;
+    height: 40%;
     background-blend-mode: screen;
     overflow: hidden;
-    border-radius: $border-radius;
+    // border-radius: $border-radius;
 
     &--1 {
       background-image: url(/img/devcon.jpg);
@@ -101,7 +102,7 @@
     background-color: $color-primary-dark;
   }
   &__details {
-    height: 100%;
+    height: 25rem;
     padding: 3rem;
     background-image: linear-gradient(
       to right bottom,
@@ -196,7 +197,7 @@
 
       &--back {
         transform: rotateY(0);
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        // clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       }
     }
 
@@ -220,7 +221,6 @@
       text-align: center;
       padding: 4rem;
       padding-top: 4rem;
-      // margin-top: -4rem;
     }
     &__price-box {
       margin-bottom: 5rem;
@@ -231,8 +231,5 @@
       font-weight: 400;
       margin-top: 0.5rem;
     }
-    // &__price-value {
-    //   font-size: 4rem;
-    // }
   }
 }

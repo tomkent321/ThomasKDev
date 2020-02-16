@@ -1,0 +1,221 @@
+.section-project {
+  background-color: lightgrey;
+}
+
+.project {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
+    justify-content: space-evenly;
+    align-content: space-around;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  height: calc(22vw * 1.75);
+  width: 22vw;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-bottom: 3rem;
+  border-radius: $border-radius;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  @include respond(tab-land) {
+    height: calc(30vw * 1.75);
+    width: 30vw;
+  }
+
+  @include respond(tab-port) {
+    height: calc(45vw * 1.75);
+    width: 45vw;
+  }
+
+  @include respond(phone) {
+    height: calc(55vw * 1.75);
+    width: 55vw;
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // height: calc(22vw * 1.75);
+  // width: 22vw;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(242, 239, 239);
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-sum {
+  font-size: 1.3rem;
+  height: 60%;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.7),
+    rgba($color-grey-dark-3, 0.8)
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  color: $color-grey-light-1;
+  ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    li {
+      text-align: left;
+      font-size: 1.4rem;
+      padding: 0.75rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-light-2;
+      }
+    }
+  }
+}
+
+.flip-card-title {
+  // margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.flip-card-back-title {
+  margin-top: 2rem;
+  color: $color-primary-dark;
+  // padding: 2rem;
+}
+
+.flip-card-picture {
+  background-size: cover;
+  height: 40%;
+  background-blend-mode: screen;
+  overflow: hidden;
+  // border-radius: $border-radius;
+
+  &--1 {
+    background-image: url(/img/devcon.jpg);
+  }
+  &--2 {
+    background-image: url(/img/githubfinder.jpg);
+  }
+  &--3 {
+    background-image: url(/img/budgetApp.jpg);
+  }
+
+  &--4 {
+    background-image: url(/img/recipeApp.jpg);
+  }
+
+  &--5 {
+    background-image: url(/img/contactkeeperB.jpg);
+  }
+
+  &--6 {
+    background-image: url(/img/nexter.jpg);
+  }
+  &--7 {
+    background-image: url(/img/newtech.jpg);
+  }
+
+  &--8 {
+    background-image: url(/img/clickPlane.jpg);
+  }
+}
+
+.flip-card-back-detail {
+  background-color: $color-grey-light-1;
+  height: 85%;
+  // padding: 2rem;
+  padding-top: 1rem;
+
+  ul {
+    padding: 2rem;
+    text-align: left;
+    color: black;
+    list-style: none;
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: $bp-1400) {
+      font-size: 1.3rem;
+    }
+
+    @media only screen and (max-width: $bp-1200) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $bp-1000) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-900) {
+      font-size: 2.2rem;
+    }
+
+    @media only screen and (max-width: $bp-700) {
+      font-size: 1.9rem;
+    }
+
+    @media only screen and (max-width: $bp-500) {
+      font-size: 1.5rem;
+    }
+
+    li {
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.flip-card-buttons {
+  // padding: 1rem;
+  height: 15%;
+}
+
+.flip-btn--app,
+.flip-btn--code {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.flip-btn--app {
+  background-color: $color-primary-light;
+  height: 50%;
+  border-bottom: 1px solid white;
+}
+
+.flip-btn--code {
+  background-color: $color-primary-dark;
+  height: 50%;
+}

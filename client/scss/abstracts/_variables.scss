@@ -47,9 +47,13 @@ $border-radius: 5px;
 
 // media query break point variables  must be in scss not css variables to work
 
+$bp-1400: 87.5em;
+$bp-1300: 81.25em;
 $bp-1200: 75em;
 $bp-1100: 68.75em;
 $bp-1000: 62.5em;
 $bp-900: 56.25em;
+$bp-800: 50em;
+$bp-700: 43.75em;
 $bp-600: 37.5em;
 $bp-500: 31.25em;

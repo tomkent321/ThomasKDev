@@ -47,6 +47,18 @@
   }
 }
 
+.section-project {
+
+  padding: 2rem 0 15rem 0;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
+
+
+
+}
+
 .section-stories {
   position: relative;
   padding: 15rem 0;
