@@ -1635,10 +1635,6 @@ body {
   color: #f7f7f7;
 }
 
-.section-project {
-  background-color: lightgrey;
-}
-
 .project__row {
   display: -webkit-box;
   display: -ms-flexbox;
