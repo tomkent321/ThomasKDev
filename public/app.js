@@ -137,6 +137,6 @@ $(window).on('resize scroll', function() {
   }
 });
 
-$('.flip-card').ontouchstart(function() {
+$('.flip-card').on('click', function() {
   $(this).toggleClass('flip-card-over');
 });
