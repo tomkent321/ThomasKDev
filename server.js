@@ -57,3 +57,5 @@ app.post('/addContact', (req, res) => {
       res.status(400).send('Unable to save to database');
     });
 });
+
+// ssh root@165.227.14.100
