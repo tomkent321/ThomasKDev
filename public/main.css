@@ -1451,6 +1451,12 @@ body {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  -webkit-animation-iteration-count: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .flip-card-over .flip-card-inner-over {
   -webkit-animation-iteration-count: rotateY(180deg);
   -webkit-transform: rotateY(180deg);

@@ -137,6 +137,10 @@ $(window).on('resize scroll', function() {
   }
 });
 
-$('.flip-card').on('click', function() {
+// $('.flip-card').on('click', function() {
+//   $(this).toggleClass('flip-card-over');
+// });
+
+$('#flip-1, #flip-1-b').on('click', function() {
   $(this).toggleClass('flip-card-over');
 });
