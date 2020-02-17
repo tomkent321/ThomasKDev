@@ -136,3 +136,7 @@ $(window).on('resize scroll', function() {
     chartLoaded = false;
   }
 });
+
+$('.flip-card').ontouchstart(function() {
+  $(this).toggleClass('flip-card-over');
+});
