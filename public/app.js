@@ -12,7 +12,7 @@ changeBack = () => {
     } else {
       bike = {
         background: 'url(/img/skillsbac.png) no-repeat center',
-        backgroundSize: '25vw auto'
+        backgroundSize: '45vw auto'
       };
     }
 
