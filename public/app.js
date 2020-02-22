@@ -27,7 +27,7 @@ changeBack = () => {
     } else {
       skier = {
         background: 'url(/img/skier.png) no-repeat center',
-        backgroundSize: '25vw auto'
+        backgroundSize: '45vw auto'
       };
     }
 
