@@ -1,6 +1,6 @@
 .form {
   &__group:not(:last-child) {
-    line-height: 1.2;
+    line-height: 0.5;
     margin-bottom: 2rem;
 
     @media only screen and (max-width: $bp-1000) {
@@ -144,7 +144,7 @@
 }
 
 #message {
-  width: 95%;
+  // width: 95%;
   height: 29rem;
   font-size: 2rem;
   font-family: inherit;

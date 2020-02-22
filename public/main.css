@@ -808,7 +808,7 @@ body {
 }
 
 .form__group:not(:last-child) {
-  line-height: 1.2;
+  line-height: 0.5;
   margin-bottom: 2rem;
 }
 
@@ -983,7 +983,6 @@ body {
 }
 
 #message {
-  width: 95%;
   height: 29rem;
   font-size: 2rem;
   font-family: inherit;
@@ -1829,7 +1828,6 @@ body {
 
 @media only screen and (max-width: 56.25em) {
   .row {
-    max-width: 50rem;
     padding: 0 3rem;
   }
 }
