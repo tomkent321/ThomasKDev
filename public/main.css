@@ -808,7 +808,15 @@ body {
 }
 
 .form__group:not(:last-child) {
+  line-height: 1.2;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .form__group:not(:last-child) {
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
 }
 
 @media only screen and (max-width: 75em) {
@@ -831,6 +839,13 @@ body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media only screen and (max-width: 75em) {
+  .form__input {
+    font-size: 1.4rem;
+    padding: 0.9rem 1.4rem;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1766,7 +1781,20 @@ body {
 }
 
 .header__logo {
-  height: 110px;
+  max-width: 30%;
+  height: auto;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .header__logo {
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header__logo {
+    max-width: 60%;
+  }
 }
 
 .header__logo:hover {
@@ -1886,8 +1914,20 @@ body {
 }
 
 .footer__logo {
-  width: 15rem;
+  max-width: 30%;
   height: auto;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .footer__logo {
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__logo {
+    max-width: 60%;
+  }
 }
 
 .footer__navigation {
@@ -1930,9 +1970,6 @@ body {
   color: #52a099;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  -webkit-transform: rotate(-5deg) scale(1.3);
-      -ms-transform: rotate(-5deg) scale(1.3);
-          transform: rotate(-5deg) scale(1.3);
 }
 
 .footer__copyright {
@@ -2225,9 +2262,12 @@ body {
 .book {
   width: 95%;
   margin: auto;
-  background: url(/img/launch.jpg) no-repeat center fixed, -webkit-gradient(linear, left top, right bottom, from(rgba(129, 186, 180, 0.8)), to(rgba(78, 125, 120, 0.8)));
-  background: url(/img/launch.jpg) no-repeat center fixed, -o-linear-gradient(left top, rgba(129, 186, 180, 0.8), rgba(78, 125, 120, 0.8));
-  background: url(/img/launch.jpg) no-repeat center fixed, linear-gradient(to right bottom, rgba(129, 186, 180, 0.8), rgba(78, 125, 120, 0.8));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(/img/launch.jpg) no-repeat center, -webkit-gradient(linear, left top, right bottom, from(rgba(129, 186, 180, 0.8)), to(rgba(78, 125, 120, 0.8)));
+  background: url(/img/launch.jpg) no-repeat center, -o-linear-gradient(left top, rgba(129, 186, 180, 0.8), rgba(78, 125, 120, 0.8));
+  background: url(/img/launch.jpg) no-repeat center, linear-gradient(to right bottom, rgba(129, 186, 180, 0.8), rgba(78, 125, 120, 0.8));
   background-size: 95vw auto;
 }
 

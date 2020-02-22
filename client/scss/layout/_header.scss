@@ -49,7 +49,16 @@
   }
 
   &__logo {
-    height: 110px;
+    max-width: 30%;
+    height: auto;
+
+    @media only screen and (max-width: $bp-1000) {
+      max-width: 40%;
+    }
+
+    @media only screen and (max-width: $bp-600) {
+      max-width: 60%;
+    }
   }
 
   &__logo:hover {

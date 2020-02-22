@@ -1,19 +1,35 @@
 let toggle = 2;
+let bike;
+let skier;
 
 changeBack = () => {
   if (toggle === 1) {
-    const bike = {
-      background: 'url(/img/skillsbac.png) no-repeat center fixed',
-      backgroundSize: '35vw auto'
-    };
+    if (screen.width > 1000) {
+      bike = {
+        background: 'url(/img/skillsbac.png) no-repeat center',
+        backgroundSize: '55vw auto'
+      };
+    } else {
+      bike = {
+        background: 'url(/img/skillsbac.png) no-repeat center',
+        backgroundSize: '25vw auto'
+      };
+    }
 
     $('#skillsBack').css(bike);
     toggle = 2;
   } else {
-    const skier = {
-      background: 'url(/img/skier.png) no-repeat center fixed',
-      backgroundSize: '35vw auto'
-    };
+    if (screen.width > 1000) {
+      skier = {
+        background: 'url(/img/skier.png) no-repeat center',
+        backgroundSize: '55vw auto'
+      };
+    } else {
+      skier = {
+        background: 'url(/img/skier.png) no-repeat center',
+        backgroundSize: '25vw auto'
+      };
+    }
 
     $('#skillsBack').css(skier);
     toggle = 1;
@@ -136,18 +152,3 @@ $(window).on('resize scroll', function() {
     chartLoaded = false;
   }
 });
-
-// $('.flip-card').on('click', function() {
-//   $(this).toggleClass('flip-card-over');
-// });
-
-// $('#flip-1').on('click', function() {
-//   $(this).toggleClass('flip-card-over');
-// });
-// $('#flip-1-b').on('click', function() {
-//   $(this).toggleClass('flip-card-over');
-// });
-
-// $('#card-1-b, #card-1').on('click', function() {
-//   $(this).toggleClass('flip-card-over');
-// });

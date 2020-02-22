@@ -48,15 +48,11 @@
 }
 
 .section-project {
-
   padding: 2rem 0 15rem 0;
 
   @include respond(tab-port) {
     padding: 20rem 0 10rem 0;
   }
-
-
-
 }
 
 .section-stories {
@@ -80,8 +76,9 @@
 .book {
   width: 95%;
   margin: auto;
+  display: flex;
 
-  background: url(/img/launch.jpg) no-repeat center fixed,
+  background: url(/img/launch.jpg) no-repeat center,
     linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),

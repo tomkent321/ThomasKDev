@@ -1,6 +1,12 @@
 .form {
   &__group:not(:last-child) {
+    line-height: 1.2;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-1000) {
+      line-height: 1;
+      margin-bottom: 2rem;
+    }
 
     @include respond(tab-land) {
       margin-bottom: 1rem;
@@ -19,6 +25,11 @@
     width: 95%;
     display: block;
     transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-1200) {
+      font-size: 1.4rem;
+      padding: 0.9rem 1.4rem;
+    }
 
     @include respond(tab-port) {
       width: 100%;
