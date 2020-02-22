@@ -57,3 +57,18 @@ $bp-800: 50em;
 $bp-700: 43.75em;
 $bp-600: 37.5em;
 $bp-500: 31.25em;
+
+
+
+// / Media Query Manager  *********************
+
+/*
+@include respond(tab-land) {  }   // < 1200px
+@include respond(tab-port) {  }   //< 900 px
+@include respond(phone) {  }      //< 600 px
+@include respond(big-desktop) {  }//> 1800 px
+
+*/
+// max-width =  is the width less that the breakpoint?
+
+// 1 em = 16px

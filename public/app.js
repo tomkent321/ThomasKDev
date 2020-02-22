@@ -141,9 +141,13 @@ $(window).on('resize scroll', function() {
 //   $(this).toggleClass('flip-card-over');
 // });
 
-$('#flip-1').on('click', function() {
-  $(this).toggleClass('flip-card-over');
-});
-$('#flip-1-b').on('click', function() {
-  $(this).toggleClass('flip-card-over');
-});
+// $('#flip-1').on('click', function() {
+//   $(this).toggleClass('flip-card-over');
+// });
+// $('#flip-1-b').on('click', function() {
+//   $(this).toggleClass('flip-card-over');
+// });
+
+// $('#card-1-b, #card-1').on('click', function() {
+//   $(this).toggleClass('flip-card-over');
+// });

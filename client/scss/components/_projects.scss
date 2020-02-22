@@ -21,18 +21,25 @@
   border-radius: $border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
+  @media only screen and (max-width: $bp-1200) {
+    margin-bottom: 5rem;
+  }
+
   @include respond(tab-land) {
-    height: calc(30vw * 1.75);
-    width: 30vw;
+    height: calc(22vw * 3.5);
+    width: 22vw;
+    // display: flex;
+    // flex-direction: column;
   }
 
   @include respond(tab-port) {
-    height: calc(45vw * 1.75);
-    width: 45vw;
+    height: calc(33vw * 2.5);
+    width: 33vw;
+    margin-bottom: 6rem;
   }
 
   @include respond(phone) {
-    height: calc(55vw * 1.75);
+    height: calc(55vw * 2.5);
     width: 55vw;
   }
 }
@@ -51,9 +58,19 @@
 .flip-card:hover .flip-card-inner {
   -webkit-animation-iteration-count: rotateY(180deg);
   transform: rotateY(180deg);
+
+  @include respond(tab-land) {
+    -webkit-animation-iteration-count: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
 }
 
-.flip-card-over .flip-card-inner-over {
+.flipper {
+  -webkit-animation-iteration-count: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.unflipper {
   -webkit-animation-iteration-count: rotateY(180deg);
   transform: rotateY(180deg);
 }
@@ -66,6 +83,14 @@
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+
+  @include respond(tab-land) {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    -webkit-backface-visibility: visible; /* Safari */
+    backface-visibility: visible;
+  }
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -76,10 +101,16 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  // background-color: dodgerblue;
   color: white;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+
+  @include respond(tab-land) {
+    color: transparent;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
 }
 
 .flip-card-sum {
@@ -102,6 +133,11 @@
       font-size: 1.4rem;
       padding: 0.75rem;
 
+      @media only screen and (max-width: $bp-800) {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+      }
+
       &:not(:last-child) {
         border-bottom: 1px solid $color-grey-light-2;
       }
@@ -117,6 +153,10 @@
 .flip-card-back-title {
   margin-top: 2rem;
   color: $color-primary-dark;
+  @include respond(tab-land) {
+    display: none;
+  }
+
   // padding: 2rem;
 }
 
@@ -155,6 +195,17 @@
   &--8 {
     background-image: url(/img/clickPlane.jpg);
   }
+
+  @include respond(tab-land) {
+    height: calc(30vs * 0.4);
+    // width: 30vw;
+    // position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include respond(phone) {
+    height: calc(55vw * 0.6);
+  }
 }
 
 .flip-card-back-detail {
@@ -168,31 +219,34 @@
     text-align: left;
     color: black;
     list-style: none;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
-    @media only screen and (max-width: $bp-1400) {
-      font-size: 1.3rem;
-    }
+    // @media only screen and (max-width: $bp-1400) {
+    //   font-size: 1.3rem;
+    // }
 
-    @media only screen and (max-width: $bp-1200) {
-      font-size: 1.8rem;
-    }
+    // @media only screen and (max-width: $bp-1200) {
+    //   font-size: 1.8rem;
+    // }
 
     @media only screen and (max-width: $bp-1000) {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     @media only screen and (max-width: $bp-900) {
-      font-size: 2.2rem;
+      font-size: 1.6rem;
     }
 
-    @media only screen and (max-width: $bp-700) {
-      font-size: 1.9rem;
+    @media only screen and (max-width: $bp-800) {
+      font-size: 1.4rem;
     }
+    // @media only screen and (max-width: $bp-700) {
+    //   font-size: 1.9rem;
+    // }
 
-    @media only screen and (max-width: $bp-500) {
-      font-size: 1.5rem;
-    }
+    // @media only screen and (max-width: $bp-500) {
+    //   font-size: 1.5rem;
+    // }
 
     li {
       text-decoration: none;
@@ -203,24 +257,55 @@
 
 .flip-card-buttons {
   // padding: 1rem;
+  background-color: $color-grey-light-1;
   height: 15%;
 }
 
 .flip-btn--app,
 .flip-btn--code {
   display: block;
-  padding: 1rem;
+  padding-top: 0.5rem;
   text-decoration: none;
   color: white;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 0;
+
+  @media only screen and (max-width: $bp-1000) {
+    font-size: 1.2rem;
+  }
+
+  @media only screen and (max-width: $bp-900) {
+    font-size: 1.6rem;
+  }
 }
 
 .flip-btn--app {
   background-color: $color-primary-light;
-  height: 50%;
-  border-bottom: 1px solid white;
+  // height: 50%;
+  // line-height: 100%;
+  // border-bottom: 1px solid white;
+  // vertical-align: middle;
+  // text-align: center;
+
+  // margin: 0;
+  // position: relative;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 .flip-btn--code {
   background-color: $color-primary-dark;
-  height: 50%;
+  // height: 50%;
+  // line-height: 100%;
+
+  // margin: 0;
+  // position: relative;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
