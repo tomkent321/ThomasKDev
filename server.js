@@ -57,5 +57,3 @@ app.post('/addContact', (req, res) => {
       res.status(400).send('Unable to save to database');
     });
 });
-
-// 165.227.14.100
